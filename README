@@ -1,0 +1,10 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2259
+
+This plugin let's you assign names to buffers, which may later on be used to navigate to this buffer
+by the assigned name. This is not very sophisticated and there are a lot of other navigation plugins,
+but maybe it fits your need.
+
+:NameBuffer resp. :NameThisBuffer let's you assign a name to a buffer.
+:GotoNamedBuffer navigates to a buffer by name.
+:UnnameBuffer remove a previously assigned buffer.
+:ListNamedBuffers to see what names you already assigned.

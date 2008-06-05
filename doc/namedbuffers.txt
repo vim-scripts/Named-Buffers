@@ -1,0 +1,98 @@
+*namedbuffers.txt*             Named Buffers
+
+Named Buffers
+=============
+
+Introduction
+------------
+
+The NamedBuffers plugin let's you give a name to buffers. In that way you
+can easily mark special buffers you need a lot. Then it is easy switch there
+using the previously assigned name. This can also be achieved by a simple
+|:buffer| command. However here you have to remember the buffer's number,
+whereas with the plugin you can assign a mnomic name to the buffer.
+
+CONTENTS
+--------
+
+NameBuffer                                      |:NameBuffer|
+NameThisBuffer                                  |:NameThisBuffer|
+UnnameBuffer                                    |:UnnameBuffer|
+GotoNamedBuffer                                 |:GotoNamedBuffer|
+ListNamedBuffers                                |:ListNamedBuffers|
+License                                         |namedbuffers-License|
+
+                                                *:NameBuffer*
+NameBuffer
+----------
+
+With this command you can assign a name to a buffer. The first argument is the
+buffers number, the second the name, you'd like to assign to it. It is also
+possible to assign several names to the same buffer. Note: When a buffer is
+deleted it's also removed from the named buffers list.
+>
+        :NameBuffer 1 MyNo1
+<
+                                                *:NameThisBuffer*
+NameThisBuffer
+--------------
+
+Similar to NameBuffer, but use the currently active buffer.
+>
+        :NameThisBuffer MyCurrentBuffer
+<
+                                                *:UnnameBuffer*
+UnnameBuffer
+------------
+
+Remove a previously registered name from a buffer. In case there is more than
+one name assigned to a buffer those names are not effected.
+>
+        :UnnameBuffer MyNo1
+<
+                                                *:GotoNamedBuffer*
+GotoNamedBuffer
+---------------
+
+Well... That's what we liked to do in the first place: go to a buffer based in
+the assigned name.
+>
+        :GotoNamedBuffer MyCurrentBuffer
+<
+                                                *:ListNamedBuffers*
+ListNamedBuffers
+----------------
+
+Finally we can have an overview over the already assigned names and the
+corresponding buffer number. An optional regular expression may be given to
+filter the list.
+>
+        :ListNamedBuffers My.*
+<
+                                                *namedbuffers-License*
+License
+-------
+
+Copyright (c) 2008 Meikel Brandmeyer, Frankfurt am Main
+All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+==============================================================================
+.. vim: set ft=help norl ts=8 tw=78 et :
